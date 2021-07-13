@@ -9,9 +9,9 @@ const Universidad = () => {
     }, [])
 
     const  obtenerUniversidad = async () =>{
-        const res = await axios.get()
+        const res = await axios.get("http://sgcn-app.herokuapp.com/seguridad/obtenerUniversidades")
         console.log(res);
-        setState(res);
+        setState(res.data[0].nombreUniversidad);
     }
     return (
         <div>
