@@ -4,6 +4,10 @@ import axios from "axios";
 const Universidad = () => {
     const [state, setState] = useState([]);
 
+
+
+
+    
     useEffect(() => {
         obtenerUniversidad();
     }, [])
