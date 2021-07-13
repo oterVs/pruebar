@@ -7,18 +7,19 @@ const Universidad = () => {
 
 
 
-    
+
     useEffect(() => {
         obtenerUniversidad();
     }, [])
 
     const  obtenerUniversidad = async () =>{
-        const res = await axios.get("http://sgcn-app.herokuapp.com/seguridad/obtenerUniversidades")
+        const res = await axios.get("https://sgcn-app.herokuapp.com/seguridad/obtenerUniversidades")
         console.log(res);
         setState(res.data[0].nombreUniversidad);
     }
     return (
         <div>
+            <h2>probando</h2>
             <h3>{state}</h3>
         </div>
     )
